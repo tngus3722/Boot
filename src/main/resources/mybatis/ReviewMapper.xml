@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.ReviewMapper">
+    <select id="display" resultType="review">
+        SELECT * FROM review WHERE fish_id = #{fish_id}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO review(fish_id, user_id, writer, title, content) VALUES(#{fish_id},#{user_id}, #{writer}, #{title}, #{content})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM review WHERE id = #{id}
+    </delete>
+
+    <select id="getPasswordById" resultType="String">
+        SELECT password FROM review WHERE id = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE review SET title=#{title},content=#{content},update_at=now() WHERE id=#{id}
+    </update>
+
+    <select id="getReviewById" resultType="review">
+        SELECT * FROM review WHERE id = #{id}
+    </select>
+</mapper>
