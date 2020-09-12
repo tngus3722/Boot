@@ -4,10 +4,7 @@ import com.example.demo.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,8 @@ public class TestController {
     private ReviewService reviewService;
 
     @RequestMapping(value = "/test" , method = RequestMethod.GET)
-    public String HelloSpringBoot(@RequestParam ("str") String str){
+    public String HelloSpringBoot(String str){
+        System.out.println(str);
         return "Hello Spring Boot World" + str;
     }
 
