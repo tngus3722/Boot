@@ -19,7 +19,7 @@ public class TestController {
         System.out.println(str);
         return "Hello Spring Boot World" + str;
     }
-
+// test2 branch
     @RequestMapping(value = "/review", method = RequestMethod.GET)
     public ResponseEntity display ( @RequestParam("fish_id") Integer fish_id ){
         return new ResponseEntity(reviewService.display(fish_id), HttpStatus.OK);
