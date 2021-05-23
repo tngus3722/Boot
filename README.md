@@ -1,6 +1,8 @@
 # Boot
 Spring Boot Lib example
 
+자주 사용하는 Spring boot의 기능들을 구현해 놓은 Base Project 입니다.
+
 <ul>
   <li>mybatis-mysql 사용</li>
   <li>Slack notification 기능</li>
